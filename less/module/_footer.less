@@ -1,0 +1,30 @@
+footer {
+    color: @color__white;
+    display: flex;
+    margin-top: 2rem;
+
+    a {
+        flex-grow: 1;
+        padding: 1em;
+        margin: 1em;
+        background-color: @color__green;
+        text-align: center;
+        text-decoration: none;
+        color: @color__white;
+        font-weight: bold;
+
+        &:hover {
+            text-decoration: none;
+            color: @color__green;
+            background-color: fade(@color__green, 50%);
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    footer a {
+        padding: 1rem;
+        margin: 0.5em;
+    }
+
+}
