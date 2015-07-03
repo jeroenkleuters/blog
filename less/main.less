@@ -1,6 +1,6 @@
 // Bootstrap
 // path
-@bootstrap: 'dist/bootstrap-3.3.4/less';
+@bootstrap: '../dist/bootstrap-3.3.4/less';
 
 // Core variables and mixins
 @import "@{bootstrap}/variables";
@@ -20,10 +20,11 @@
 
 @import "@{bootstrap}/responsive-utilities";
 
+// bootstrap overwrites
+@import 'layout/_bs-overwrites';
 
 //glyphicons_social
 @import 'dist/glyphicons_social/less/glyphicons-social';
-
 
 
 // Base classes
@@ -31,35 +32,12 @@
 @import 'base/_fonts';
 @import 'base/_base';
 @import 'base/_mixins';
-@import 'base/_animation';
 
 // Layout
 @import 'layout/_layout';
 
 // Modules
 @import 'module/_header';
-@import 'module/_menu';
+@import 'module/_about';
+@import 'module/_post';
 @import 'module/_footer';
-@import 'module/_form';
-
-
-
-// Components//
-
-
-// fonts try-out
-.lane_-_narrowregular {
-    font-family: 'lane_-_narrowregular';
-}
-
-.ostrich_sansbold {
-    font-family: 'ostrich_sansbold';
-}
-
-.ambleregular {
-    font-family: 'ambleregular';
-}
-
-.aaarghnormal {
-    font-family: 'aaarghnormal';
-}

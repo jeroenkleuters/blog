@@ -3,12 +3,26 @@ module.exports = function(grunt) {
     less: {
       development: {
         options: {
-          compress: false,
+          compress: true,
           yuicompress: true,
           optimization: 2
         },
         files: {
-          "assets/template/css/main.css": "assets/template/less/main.less"
+          "css/main.css": "less/main.less"
+        }
+      }
+    },
+
+    jade: {
+      compile: {
+        options: {
+          pretty: true,
+          data: {
+            debug: false
+          }
+        },
+        files: {
+          "index.html": "jade/**/*.jade"
         }
       }
     },
@@ -18,12 +32,12 @@ module.exports = function(grunt) {
             options: {
                 port: 9001,
                 hostname: 'localhost',
-                base: 'E:/werk/www/blog/assets/assets/template',
+                base: 'E:/werk/www/blog/assets/template/',
                 open: true,
                 options: {
                   index: 'index.html'
-                }
-                // keepalive: true, // Should be disabled when 'watch' is connected
+                },
+                keepalive: false,
                 // livereload: true // Not needed when defined in watch task
             }
         }
@@ -52,8 +66,8 @@ module.exports = function(grunt) {
     },
     watch: {
       styles: {
-        files: ['less/**/*.less'],
-        tasks: ['less', 'ftpush:build'],
+        files: ['less/**/*.less','jade/**/*.jade'],
+        tasks: ['less','jade'], //['less', 'ftpush:build'],
         options: {
           nospawn: true,
             livereload: true,
@@ -72,6 +86,7 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-less');
   grunt.loadNpmTasks('grunt-contrib-connect');
   grunt.loadNpmTasks('grunt-contrib-watch');
+  grunt.loadNpmTasks('grunt-contrib-jade');
   grunt.loadNpmTasks('grunt-contrib-csslint')
   grunt.loadNpmTasks('grunt-ftpush');
 

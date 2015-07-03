@@ -1,25 +1,26 @@
 html,body {
-    color: @color__text-dark;
+    color: @color__white;
+    background-color: @color__white;
     font-size: 16px;
     font-family: @font_normal;
-    line-height: 1,2 em;
+    line-height: 1,2em;
     height: 100%;
-    word-break: break-word;
 }
 
 body {
-    .body-gradient();
-}
 
-h1, h2, h3, h4, h5 {
-    font-family: @font_header;
-    color: #9D7518;
 }
 
 h1 {
-    font-size: 2.8rem;
-    font-weight: bold;
+    font-family: @font_header;
+    font-size: 1.75rem;
+    line-height: 0;
 }
+
+h2, h3, h4, h5 {
+    font-family: @font_header_small;
+}
+
 
 p {
     margin-bottom: 1.6rem;

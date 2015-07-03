@@ -1,6 +1,8 @@
 .container {
-    background-color: @color__white;
+    background-color: @color__black;
     display: table;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
 }
 
 section article {
@@ -8,51 +10,13 @@ section article {
 }
 
 section aside {
-    margin-top: 6rem;
+    margin-top: 2rem;
 }
-
 
 aside address {
     a {
         font-size: 2rem;
-        color: @color__gold;
         margin-bottom: 1rem;
         text-decoration: none;
-
-        &:hover {
-            text-decoration: none;
-            color: fade( @color__gold, 50%);
-        }
-    }
-}
-
-@media (max-width: 991px) {
-    section aside {
-        margin-top: 6rem;
-    }
-
-    aside address {
-        text-align: center;
-        a {
-            margin: 1rem 0.5rem 0 0;
-
-            &:last-of-type {
-                margin-right: 0;
-            }
-        }
-    }
-}
-
-@media (max-width: 768px) {
-    section article {
-       margin-top: 4rem;
-    }
-
-    aside address {
-        margin: 1rem 0 0 0;
-        a {
-            font-size: 3rem;
-            margin: 0 0 1rem 0;
-        }
     }
 }

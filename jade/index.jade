@@ -1,0 +1,16 @@
+include modules/html-head.html
+
+.container
+    section.row
+        header.page-header.col-sm-12
+            include modules/header.jade
+
+    section.row
+        article.post.col-xs-12.col-sm-8.col-sm-push-4
+            include modules/post.jade
+
+        aside.col-xs-12.col-sm-4.col-sm-pull-8
+            include modules/about.jade
+
+    section.row
+        include modules/footer.jade
